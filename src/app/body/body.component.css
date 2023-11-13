@@ -31,3 +31,25 @@
     background-color: #8D5250;
     height: 60px;
 }
+
+.container-contato{ /* Criando e dividindo o container do contato*/
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-contato img{
+    height: 200px;
+}
+
+.telefone h4, .endereco h4, .email h4{
+    color: #303030;
+}
+
+.telefone p, .endereco p, .email p{
+    color: #303030;
+}
+
+.telefone a, .endereco a, .email a{
+    color: #e8f0c2;
+}
