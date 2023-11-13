@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 
+
 //Interface do meu produto e os campos que eu vou mostrar.
 interface Product {
   id: number;
