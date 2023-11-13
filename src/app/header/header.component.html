@@ -1,27 +1,36 @@
 <div class="header">
     <div class="container-image">
-        <img src="../../assets/logodigifred.png" alt="Digifred">
+        <a href="https://digifred.com.br" target="_blank">
+          <img src="../../assets/logodigifred.png" alt="Digifred">
+        </a>
     </div>
 
     <div class="container-icons">
         <div>
+          <a href="https://github.com/PaCleo" target="_blank">
             <fa-icon class="icons" [icon]="faGithub"
             [classes]="['custom-size', isMouseOverGithub ? 'fa-beat' : '']"
               (mouseenter)="onGithubMouseEnter()"
               (mouseleave)="onGithubMouseLeave()"
             [size]="'xl'" style="color: #b13979;"></fa-icon>
+          </a>
 
+          <a href="https://www.linkedin.com/in/leonardo-tamiozzo/" target="_blank">
             <fa-icon class="icons" [icon]="faLinkedin"
             [classes]="['custom-size', isMouseOverLinkedin ? 'fa-beat' : '']"
               (mouseenter)="onLinkedinMouseEnter()"
               (mouseleave)="onLinkedinMouseLeave()"
             [size]="'xl'" style="color: #b13979;"></fa-icon>
-            
+          </a>
+
+          <a href="https://www.instagram.com/pacleoo/" target="_blank">
             <fa-icon class="icons" [icon]="faInstagram"
             [classes]="['custom-size', isMouseOverInstagram ? 'fa-beat' : '']"
               (mouseenter)="onInstagramMouseEnter()"
               (mouseleave)="onInstagramMouseLeave()"
             [size]="'xl'" style="color: #b13979;"></fa-icon>
+          </a> 
+
         </div>
         <p class="name">Leonardo Tamiozzo</p>
     </div>
