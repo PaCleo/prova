@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+}
+
+.footer{
+    height: 50px;
+    background-color: #303030;
+}
+
+.texto{
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+}
+
+.texto p{
+    color: #e8f0c2;
+    text-align: center;
+    font-size: 18px;
+}
