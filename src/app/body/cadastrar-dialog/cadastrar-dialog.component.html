@@ -1,0 +1,16 @@
+<!-- 
+    Tirado diretamente do Angular Material usa o mat-form-field para enviar um formulario que vai para o cadastrar-dialog
+    e apos isso envia para o body
+-->
+
+<h1 class="text-color h1" mat-dialog-title>Adicione um Produto</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label class="text-color">Titulo</mat-label>
+        <input matInput placeholder="Titulo" [(ngModel)]="titulo">
+    </mat-form-field>
+</div>
+<div class="container-button" mat-dialog-actions>
+    <button class="text-color" mat-button (click)="cancel()">Cancelar</button>
+    <button class="text-color" mat-button [mat-dialog-close]="{ titulo: titulo }">Salvar</button>
+</div>

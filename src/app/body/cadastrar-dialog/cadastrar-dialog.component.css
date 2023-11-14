@@ -1,0 +1,13 @@
+.h1{
+    text-align: center;
+}
+
+.text-color{
+    color: #e8f0c2;
+}
+
+.container-button{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px 0px 10px;
+}
