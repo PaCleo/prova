@@ -10,7 +10,7 @@ onde teria o componente principal o app.component e os outros 2 restantes são o
 editar que abrem os dialogs dos botões cadastrar e editar.
 
 ## Header
-Cuida especificamente da estilização e imagens do Header da pagina
+Cuida especificamente da estilização e imagens do Header da pagina.
 
 # Body
 Cuida da tabela que puxa as informações da api e tambem aonde possui os botões para editar e cadastrar,
