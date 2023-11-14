@@ -1,25 +1,25 @@
-#Especificações do projeto
+# Especificações do projeto
 
 O projeto foi generado com o ANGULAR CLI na versão 16.2.9.
 Foi usado o Angular Material juntamente com o FontAwesomeModule na versão 0.13.0.
 
-##Sobre o projeto
+## Sobre o projeto
 
 O projeto foi divido em 6 componentes sendo eles as secções da pagina entre Header, Body, Footer,
 onde teria o componente principal o app.component e os outros 2 restantes são os componentes Cadastrar e
 editar que abrem os dialogs dos botões cadastrar e editar.
 
-##Header
+## Header
 Cuida especificamente da estilização e imagens do Header da pagina
 
-#Body
+# Body
 Cuida da tabela que puxa as informações da api e tambem aonde possui os botões para editar e cadastrar,
 alem disso possui tambem a parte de contatos.
 
-#Footer
+# Footer
 Cuida apenas do footer da pagina.
 
-#Cadastrar-dialog Editar-dialog
+# Cadastrar-dialog Editar-dialog
 São responsaveis por cuidar dos dialogs e receber as informações dos mesmos e enviar para o body.
 
 # Prova
