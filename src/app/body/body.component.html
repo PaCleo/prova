@@ -1,101 +1,103 @@
 <!--Usei diretamente do Angular Material apenas mudei as variaveis de acordo-->
-<div class="container">
+<body>
+  <div class="container">
+    <div class="tabela-header">
 
-  <div class="tabela-header">
+    <button mat-button class="add-buton" (click)="Cadastrar()">Cadastrar Produto</button>
+    <button mat-button class="add-buton" (click)="Editar()">Editar Produto</button>
 
-  <button mat-button class="add-buton" (click)="Cadastrar()">Cadastrar Produto</button>
-  <button mat-button class="add-buton" (click)="Editar()">Editar Produto</button>
+    </div>
 
+    <section>
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 tabela">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Numero </th>
+          <td mat-cell *matCellDef="let product"> {{ product.id }} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+          <td mat-cell *matCellDef="let product"> {{ product.title }} </td>
+        </ng-container>
+
+        <!-- Price Column -->
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Preço </th>
+          <td mat-cell *matCellDef="let product"> {{ product.price }} </td>
+        </ng-container>
+
+        <!-- Brand Column -->
+        <ng-container matColumnDef="brand">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Brand </th>
+          <td mat-cell *matCellDef="let product"> {{ product.brand }} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+
+      <!-- Mat paginator codigo direto do Angular material configurando a paginação e 
+      quantidade de produtos que eu quero em uma pagina -->
+      <mat-paginator [pageSizeOptions]="[10, 20]" showFirstLastButtons class="paginacao"></mat-paginator>
+
+    </section>
   </div>
+  
+    <section class="container-contato">
+      <div class="digifred-contato">
+        <a href="https://digifred.com.br" target="_blank">
+          <img src="../../assets/logodigifred.png" alt="DigiFred">
+        </a>
+        
 
-  <section>
-    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 tabela">
+        <div class="informacoes">
+            <div class="telefone">
+              <h4>Contato</h4>
+              <p>Telefone: <a href="tel:+5537443636">55 3744 3636 </a></p>
+            </div>
 
-      <!-- Position Column -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Numero </th>
-        <td mat-cell *matCellDef="let product"> {{ product.id }} </td>
-      </ng-container>
+            <div class="endereco">
+              <h4>Endereço</h4>
+              <p>Frederico Westphalen - RS
+                Rua José Cañellas, 138, sala 402 - Centro
+                CEP: 98400-000</p>
+            </div>
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="title">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
-        <td mat-cell *matCellDef="let product"> {{ product.title }} </td>
-      </ng-container>
+            <div class="email">
+              <h4>Email</h4>
+              <p>Email: <a href="mailto:vendas@digifred.com.br">vendas@digifred.com.br</a></p>
+            </div>
+        </div>
+      </div>
 
-      <!-- Price Column -->
-      <ng-container matColumnDef="price">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Preço </th>
-        <td mat-cell *matCellDef="let product"> {{ product.price }} </td>
-      </ng-container>
+      <div class="leonardo-contato">
 
-      <!-- Brand Column -->
-      <ng-container matColumnDef="brand">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Brand </th>
-        <td mat-cell *matCellDef="let product"> {{ product.brand }} </td>
-      </ng-container>
-
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-    </table>
-
-    <!-- Mat paginator codigo direto do Angular material configurando a paginação e 
-    quantidade de produtos que eu quero em uma pagina -->
-    <mat-paginator [pageSizeOptions]="[10, 20]" showFirstLastButtons class="paginacao"></mat-paginator>
-
-  </section>
-
-  <section class="container-contato">
-    <div class="digifred-contato">
-      <a href="https://digifred.com.br" target="_blank">
-        <img src="../../assets/logodigifred.png" alt="DigiFred">
-      </a>
+        <a href="http://pactech.dev.br" target="_blank">
+          <img src="../../assets/pactech2.png" alt="Leonardo Tamiozzo">
+        </a>
       
+          <div class="informacoes">
+            <div class="telefone">
+              <h4>Contato</h4>
+              <p>Telefone: <a href="tel:+5537443636">55 999333919 </a></p>
+            </div>
 
-      <div class="informacoes">
-          <div class="telefone">
-            <h4>Contato</h4>
-            <p>Telefone: <a href="tel:+5537443636">55 3744 3636 </a></p>
-          </div>
+            <div class="endereco">
+              <h4>Endereço</h4>
+              <p>Frederico Westphalen - RS
+                Rua Miguel Couto, 163, aparmento 502 - Centro
+                CEP: 98400-000</p>
+            </div>
 
-          <div class="endereco">
-            <h4>Endereço</h4>
-            <p>Frederico Westphalen - RS
-              Rua José Cañellas, 138, sala 402 - Centro
-              CEP: 98400-000</p>
-          </div>
-
-          <div class="email">
-            <h4>Email</h4>
-            <p>Email: <a href="mailto:vendas@digifred.com.br">vendas@digifred.com.br</a></p>
+            <div class="email">
+              <h4>Email</h4>
+              <p>Email: <a href="mailto:vendas@digifred.com.br">pereiraleo01@gmail.com</a></p>
+            </div>
           </div>
       </div>
-    </div>
-
-    <div class="leonardo-contato">
-
-      <a href="http://pactech.dev.br" target="_blank">
-        <img src="../../assets/pactech2.png" alt="Leonardo Tamiozzo">
-      </a>
-    
-        <div class="informacoes">
-          <div class="telefone">
-            <h4>Contato</h4>
-            <p>Telefone: <a href="tel:+5537443636">55 999333919 </a></p>
-          </div>
-
-          <div class="endereco">
-            <h4>Endereço</h4>
-            <p>Frederico Westphalen - RS
-              Rua Miguel Couto, 163, aparmento 502 - Centro
-              CEP: 98400-000</p>
-          </div>
-
-          <div class="email">
-            <h4>Email</h4>
-            <p>Email: <a href="mailto:vendas@digifred.com.br">pereiraleo01@gmail.com</a></p>
-          </div>
-        </div>
-    </div>
-  </section>
-</div>
+    </section>
+  
+</body>
