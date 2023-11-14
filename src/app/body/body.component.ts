@@ -67,7 +67,9 @@ export class BodyComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if(result) {
         const titulo = result.titulo;
-        this.http.post('https://dummyjson.com/products/add',titulo).subscribe(
+        this.http.post('https://dummyjson.com/products/add',{ title: titulo }, {
+          headers: { 'Content-Type': 'application/json' }
+        }).subscribe(
           (response) => {
             console.log('Post bem sucedido', response)
           }
